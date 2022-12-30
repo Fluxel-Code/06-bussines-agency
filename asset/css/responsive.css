@@ -32,10 +32,25 @@
         margin-left: 30px;
     }
 
+    .line-white::after {
+        content: "";
+        position: absolute;
+        border-bottom: 2px solid white;
+        bottom: 35%;
+        right: auto;
+        width: 180px;
+        height: 2px;
+        margin-left: 30px;
+    }
+
     /* .border-green {
         width: 500px;
         height: 261px;
     } */
+
+    .mx-width-md-200p {
+        max-width: 150px;
+    }
 
 
 }
@@ -56,6 +71,10 @@
 
     .video {
         width: 100%;
+    }
+
+    .gap-lg-30 {
+        gap: 30px;
     }
 }
 

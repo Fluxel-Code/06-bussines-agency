@@ -3,13 +3,17 @@ html {
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 
 }
 
 
 p {
     font-size: 17px !important;
+}
+
+span {
+    font-family: sans-serif !important;
 }
 
 
@@ -43,6 +47,26 @@ p {
     background-color: black;
 }
 
+/* * */
+/* ? */
+/* ! */
+
+.carousel-indicators .slider-textimonial {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.active.slider-textimonial {
+    background-color: #0bb663;
+    width: 60px;
+    border-radius: 18px !important;
+    /* transform: scaleX(1.5); */
+}
+
 .square-icon {
     width: 53px;
     height: 53px;
@@ -59,6 +83,9 @@ p {
     position: relative;
     z-index: 5;
     cursor: pointer;
+    transition: 0.5s;
+    animation-direction: alternate;
+
 }
 
 .play::before {
@@ -68,11 +95,65 @@ p {
     height: 120px;
     background-color: rgba(255, 255, 255, 0.499);
     z-index: -1;
+    animation: play 1.3s infinite ease;
+    transform: scaleX(1.0);
     border-radius: 50%;
+    justify-content: center;
     box-shadow: 0px 0px 10px 0px;
-    animation: infinite;
+
 }
 
+@keyframes play {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.form {
+    border-radius: 0px;
+    padding: 15px 10px;
+    height: 50px;
+    margin-bottom: 24px;
+}
+
+.card-textimonial {
+    padding: 50px 25px 70px;
+    transition: 0.5s;
+}
+
+.title-slider {
+    color: #0bb663;
+}
+
+.card-textimonial:hover {
+    background-color: #0bb663 !important;
+    color: #fff;
+}
+
+.card-textimonial:hover .title-slider {
+    color: #fff;
+}
+
+.footer {
+    background-color: #1d1d1d;
+    padding-top: 60px;
+}
+
+
+.shadow-textimonial {
+    box-shadow: 0px 0px 12px 10px rgba(242, 242, 242, 0.505) !important;
+    /* max-width: 50%; */
+
+    max-width: 500px;
+    /* height: 400px; */
+
+}
 
 /* buttom */
 
@@ -81,6 +162,12 @@ p {
     padding: 10px 20px;
     /* max-width: 100%; */
     width: 100%;
+    transition: 0.5s;
+
+}
+
+.btn-hover-green:hover {
+    background: #fff;
 }
 
 .btn-black {
@@ -99,6 +186,10 @@ p {
 /* gap */
 .gap-25 {
     gap: 25px;
+}
+
+.gap-10 {
+    gap: 15px;
 }
 
 /* btn */
@@ -143,9 +234,29 @@ p {
 }
 
 /* colors text */
+.text-green {
+    color: #0bb663;
+}
+
 .text-black {
     color: black;
 }
+
+.fw-regular {
+    font-weight: inherit;
+}
+
+.hover-color-white:hover {
+    color: white;
+}
+
+/* 
+.title-slider:hover {
+    color: #fff !important;
+} */
+
+
+
 
 /*  */
 .rounded-xl {
@@ -168,9 +279,23 @@ p {
     background-size: cover;
 }
 
+.bg-contact {
+    background-image: url(../img/contact-bg.png);
+    outline: none;
+    border: none;
+}
+
 /*  */
 .b-none {
     border: none;
+}
+
+.b-grey {
+    border: #363636 1px solid;
+}
+
+.bottom-neg-textimonial {
+    bottom: -100px;
 }
 
 /*  */
@@ -178,15 +303,29 @@ p {
     height: 80vh;
 }
 
-/* ?seudoelementos */
+/* ?seudoelementos ___________________________________________________________________________*/
 .line {
     position: relative;
 }
 
 .line::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid rgba(14, 13, 13, 0.867);
+    bottom: 35%;
+    right: 0;
+    width: 150px;
+    height: 2px;
+}
+
+.line-white {
+    position: relative;
+}
+
+.line-white::after {
     content: "";
     position: absolute;
-    border-bottom: 2px solid rgba(14, 13, 13, 0.867);
+    border-bottom: 2px solid white;
     bottom: 35%;
     right: 0;
     width: 150px;
@@ -207,6 +346,23 @@ p {
     top: -15px;
     left: -20px;
 }
+
+/*  */
+
+.footer-text {
+    position: relative;
+    padding: 20px 0px;
+}
+
+/* .footer-text::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    border: 1px solid gray;
+    top: -20px;
+    left: 0;
+    right: 0;
+} */
 
 /* owl carousel */
 .owl-next {
