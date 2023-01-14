@@ -58,6 +58,16 @@
 /* ?lg */
 @media screen and (min-width:992px) {
 
+    .nabvar-lg-img {
+        background-image: url(../img/header-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .navb-b-green::before {
+        display: none;
+    }
+
     .square-carousel {
         width: 480px;
         min-height: 450px;
